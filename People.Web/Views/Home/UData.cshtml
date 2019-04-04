@@ -1,0 +1,96 @@
+﻿@model People.Web.Models.User.UserData
+
+@{
+    ViewBag.Title = Model.Username;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-header header-filter" data-parallax="true" style="background-image: url(../assets/img/bg/city-profile.jpg);"></div>
+<div class="main main-raised">
+    <div class="profile-content">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-6 ml-auto mr-auto">
+                    <div class="profile">
+                        <div class="avatar col-md-7 ml-auto mr-auto">
+                            <img src="@Url.Content(Model.ProfileImageUrl)" alt="Circle Image" class="img-fluid img-thumbnail">
+                        </div>
+                        <div class="name">
+                            <h3 class="title">@Html.DisplayFor(u => u.Username)</h3>
+                            <h6>@Html.DisplayFor(u => u.Level)</h6>
+                            <a href="https://www.facebook.com/MrBean/" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-facebook-square"></i></a>
+                            <a href="https://twitter.com/MrBean?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/mrbean/?hl=en" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="description text-center">
+                <p>Mr. Bean is a British sitcom created by Rowan Atkinson and Richard Curtis, produced by Tiger Aspect Productions and starring Atkinson as the title character.Based on a character originally developed by Atkinson while he was studying for his master's degree at Oxford University, the series centres on Mr. Bean, described by Atkinson as "a child in a grown man's body", as he solves various problems presented by everyday tasks and often causes disruption in the process.</p>
+            </div>
+            <!-- Think about Icons -->
+            <div class="row">
+                <div class="col-md-6 ml-auto mr-auto">
+                    <div class="profile-tabs">
+                        <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#studio" role="tab" data-toggle="tab">
+                                    <i class="material-icons">camera</i> Pics
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#works" role="tab" data-toggle="tab">
+                                    <i class="material-icons">palette</i> Work
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
+                                    <i class="material-icons">favorite</i> Favorite
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content tab-space">
+                <div class="tab-pane active text-center gallery" id="studio">
+                    <div class="row">
+                        <div class="col-md-3 ml-auto">
+                            <img src="#" class="rounded">
+                            <img src="#" class="rounded">
+                        </div>
+                        <div class="col-md-3 mr-auto">
+                            <img src="#" class="rounded">
+                            <img src="#" class="rounded">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane text-center gallery" id="works">
+                    <div class="row">
+                        <div class="col-md-3 ml-auto">
+                            <img src="#" class="rounded">
+                            <img src="#" class="rounded">
+                            <img src="#" class="rounded">
+                        </div>
+                        <div class="col-md-3 mr-auto">
+                            <img src="#" class="rounded">
+                            <img src="#" class="rounded">
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane text-center gallery" id="favorite">
+                    <div class="row">
+                        <div class="col-md-3 ml-auto">
+                            <img src="#" class="rounded">
+                            <img src="#" class="rounded">
+                        </div>
+                        <div class="col-md-3 mr-auto">
+                            <img src="#" class="rounded">
+                            <img src="#" class="rounded">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

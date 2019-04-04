@@ -1,0 +1,12 @@
+﻿@model List<People.Web.Models.User.UserData>
+
+    @foreach (var user in Model)
+    {
+        <button class="btn btn-outline-light btn-round" , style=" height: 250px; width: 200px; margin-left: 10px; margin-right: 10px;" , id="btn" name="btn" , type="submit" value="@user.Username">
+            <img src="@Url.Content(user.ProfileImageUrl)" style=" height: 150px; width: 150px" alt="Thumbnail Image" class="img-fluid img-thumbnail rounded-circle">
+            <h4 class="card-title">
+                <small class="card-description text-muted" style="font-size: 12px;">@user.Level</small><br>
+                <big class="userName" style="font-size: 15px;">@user.Username</big>
+            </h4>
+        </button>
+    }

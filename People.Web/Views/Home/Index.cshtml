@@ -1,0 +1,36 @@
+﻿@model List<People.Web.Models.User.UserData>
+
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-header header-filter" data-parallax="true" style="background-image: url(../assets/img/bg/bg2.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
+                <div class="brand text-center">
+                    <h1>Home Page</h1>
+                    <h3 class="title text-center">Search for a User</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main main-raised">
+    <div class="container">
+        <div class="section text-center">
+            <div class="section text-center">
+                <h2 class="title">All Users</h2>
+                    <div class="team">
+                        <div class="row justify-content-center">
+                            @using (Html.BeginForm("UData", "Home", FormMethod.Post, new { autocomplete = "off" }))
+                            {
+                                @Html.Partial("~/Views/Home/User.cshtml", Model)
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

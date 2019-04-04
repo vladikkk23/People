@@ -1,0 +1,33 @@
+﻿@using People.Web.Extension
+@{
+    var user = System.Web.HttpContext.Current.GetMySessionObject();
+}
+
+
+
+<div class="container">
+    <div class="navbar-translate">
+        <a class="navbar-brand" rel="tooltip" data-placement="bottom" href="@Url.Action("Index", "Home")" data-original-title="Home">
+            <i class="fa fa-home"></i> Home
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation"></button>
+    </div>
+    <ul class="navbar-nav">
+        <li class="dropdown nav-item">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                <i class="material-icons">apps</i> Menu
+            </a>
+            <div class="dropdown-menu dropdown-with-icons" style="width: 200px; height: 150px; text-align: center;">
+                <a href="@Url.Action("UData", "Home", new { @p = user.Username })" class="dropdown-item">
+                    <i>
+                        <img src="@Url.Content(user.ProfileImageUrl)" alt="Thumbnail Image" class="img-fluid img-thumbnail rounded-circle" style=" height: 50px; width: 50px;" />
+                    </i> @user.Username
+
+                </a>
+                <a href="@Url.Action("Index", "Login")" class="dropdown-item">
+                    <i class="material-icons">logout</i> Log Out
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
