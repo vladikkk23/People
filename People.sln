@@ -1,6 +1,7 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "People.Web", "People.Web\People.Web.csproj", "{325A5D6A-5E24-4186-BECE-9CDEAF975BC4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "People.BusinessLogic", "People.BusinessLogic\People.BusinessLogic.csproj", "{2CEC2306-423F-464F-B524-46D5A0FD012E}"
@@ -31,5 +32,11 @@ Global
 		{BEE7B922-1703-4EE1-AE72-2D10B7103E6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEE7B922-1703-4EE1-AE72-2D10B7103E6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEE7B922-1703-4EE1-AE72-2D10B7103E6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EEE3B92F-E3F9-4B8D-8784-08D1BFBAAF5D}
 	EndGlobalSection
 EndGlobal
